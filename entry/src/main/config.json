@@ -1,0 +1,56 @@
+{
+  "app": {
+    "bundleName": "com.applibgroup.permission",
+    "vendor": "applibgroup",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.applibgroup.permission",
+    "name": ".MyApplication",
+    "mainAbility": "com.applibgroup.permission.MainAbility",
+    "deviceType": [
+      "tablet"
+    ],
+    "reqPermissions":[
+      {
+        "name": "ohos.permission.READ_USER_STORAGE",
+        "reason": "Permission that allows reading of User storage",
+        "usedScene": {
+          "ability": ["com.applibgroup.permission.MainAbility"],
+          "when": "always"
+        }
+      }
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.applibgroup.permission.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:entry_MainAbility",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}
